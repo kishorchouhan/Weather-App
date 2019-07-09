@@ -6,7 +6,9 @@ export default function Weather(props) {
   return (
     <div>
       <div className="currentWeather">
-        <p>Your current city: {weatherData.name}, {weatherData.sys.country}</p>
+        <p>
+          Your current city: {weatherData.name}, {weatherData.sys.country}
+        </p>
         <p>Current date and time: {date.toLocaleString()}</p>
         <p>Weather: {weatherData.weather[0].description}</p>
         <p>Temperature: {weatherData.main.temp} °C</p>
@@ -14,7 +16,7 @@ export default function Weather(props) {
         <p>Humidity: {weatherData.main.humidity} %</p>
         <p>Wind speed: {weatherData.wind.speed} meter/sec</p>
       </div>
-      <div className="sevenDayHistory"></div>
+      <div className="sevenDayHistory" />
     </div>
   );
 }

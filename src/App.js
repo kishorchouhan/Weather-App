@@ -8,7 +8,7 @@ export default class App extends Component {
   state = {
     errorMessage: "",
     weatherData: {},
-    isLoading: true,
+    isLoading: true
   };
 
   componentDidMount() {
@@ -46,13 +46,13 @@ export default class App extends Component {
 
   render() {
     const { errorMessage, weatherData } = this.state;
-    return (
-      this.state.isLoading ? (<p>Loading</p>) : (
-        <div>
-          <p>{errorMessage}</p>
-          <Weather weatherData={weatherData} />
-        </div>
-      )
+    return this.state.isLoading ? (
+      <p>Loading</p>
+    ) : (
+      <div>
+        <p>{errorMessage}</p>
+        <Weather weatherData={weatherData} />
+      </div>
     );
   }
 }
